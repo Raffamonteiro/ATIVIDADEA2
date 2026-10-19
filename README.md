@@ -173,15 +173,41 @@ A pasta `evidencias/` contém as capturas do Postman (método, URL, corpo, respo
 
 ## Uso de IA
 
-> **ATENÇÃO, aluno(a): esta seção precisa refletir o que realmente aconteceu. Edite antes de
-> entregar.** O texto abaixo é um rascunho baseado no que o assistente de IA fez na geração do
-> projeto.
+**Utilizei IA?** Sim. Usei o Claude (Anthropic) como apoio no desenvolvimento deste projeto.
 
-**Utilizei IA?** Sim, o Claude (Anthropic) foi usado como apoio para gerar a estrutura inicial do
-projeto, os testes e o rascunho deste README.
+### Tarefas em que a IA ajudou
 
-**Tarefas em que a IA ajudou:** estrutura de pastas em camadas, implementação inicial de routes,
-controllers, services e repository, testes com Jest/Supertest e documentação.
+| Tarefa | Como a IA ajudou |
+|---|---|
+| Estrutura do projeto | Sugeriu a organização em camadas (routes, controllers, services, repositories) |
+| Implementação | Gerou a versão inicial do código das camadas, das validações e do tratamento de erros |
+| Testes | Escreveu os testes automatizados com Jest e Supertest (service e API) |
+| Postman | Gerou a coleção de requisições e os corpos JSON de exemplo |
+| Documentação | Escreveu o rascunho do README |
+
+### O que eu fiz por conta própria
+
+- Executei `npm install`, `npm start` e `npm test` e conferi que os testes passam.
+- Testei os endpoints manualmente no Postman e tirei as capturas da pasta `evidencias/`.
+- Li o código de cada camada para entender a responsabilidade de cada uma.
+- [Descreva outras coisas que você fez: ajustes, correções, testes extras, uso do nodemon etc.]
+
+### Sugestões aceitas, modificadas ou rejeitadas
+
+| Sugestão da IA | Decisão | Justificativa |
+|---|---|---|
+| Separar `app.js` de `server.js` | **Aceita** | Permite testar a API com Supertest sem abrir uma porta real |
+| Classe `AppError` com middleware de erro central | **Aceita** | Diferencia erros esperados (400/404) de falhas inesperadas (500), como pede o enunciado, sem expor detalhes internos |
+| Rejeitar `valor` enviado como texto (`"350"`) | **Aceita** | O enunciado exige valor "numérico"; aceitar texto deixaria a regra ambígua |
+| Responder 404 para ids não numéricos (ex.: `/pedidos/abc`) | **Aceita** | Um id que não é número inteiro não pode existir no sistema |
+| [Sugestão que você modificou] | **Modificada** | [Por que e o que você mudou] |
+| [Sugestão que você rejeitou] | **Rejeitada** | [Por que não usou] |
+
+### Responsabilidade
+
+Revisei o código gerado e sou capaz de explicar o funcionamento de cada camada, as regras de
+validação e as transições de status. Erros que encontrei e corrigi durante o desenvolvimento:
+[descreva pelo menos um, ou escreva "nenhum" se for o caso].
 
 **Sugestões e decisões (preencha com as suas próprias, com justificativa):**
 

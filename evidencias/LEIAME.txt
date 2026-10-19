@@ -1,8 +1,0 @@
-Coloque aqui as capturas de tela do Postman (devem mostrar metodo, URL, corpo, resposta e status HTTP).
-Apague este arquivo depois de adicionar as imagens.
-
-  01-criacao.png               POST /pedidos valido -> 201
-  02-validacao.png             POST /pedidos invalido -> 400
-  03-listagem.png              GET /pedidos -> 200
-  04-consulta-inexistente.png  GET /pedidos/999 -> 404
-  05-atualizacao.png           PATCH /pedidos/1/status valido -> 200
